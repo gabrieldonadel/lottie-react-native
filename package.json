@@ -45,10 +45,7 @@
       "commitMessage": "chore: release ${version} [skip ci]",
       "tagName": "v${version}"
     },
-    "npm": {
-      "publish": false,
-      "skipChecks": true
-    },
+    "npm": false,
     "github": {
       "release": true,
       "comments": {
@@ -62,6 +59,7 @@
         "workspaces": [
           "packages/*"
         ],
+        "skipChecks": true,
         "publishCommand": "yarn workspace lottie-react-native release"
       },
       "@release-it/conventional-changelog": {
